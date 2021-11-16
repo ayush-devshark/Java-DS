@@ -8,6 +8,7 @@ public class LinkedList {
 
       new_node.data = n;
 
+      // When head is null, there are no nodes in Linked List
       if(head == null){
         // Head pointing to new_node
         head = new_node;
@@ -21,5 +22,22 @@ public class LinkedList {
         temp.next = new_node;
       }
       return;
+  }
+
+  public void show (){
+    Node temp = head;
+    while(temp != null){
+       System.out.print(temp.data +" ");
+       temp = temp.next;
+    }
+    return;
+  }
+
+  public void insertFront(int n){
+    Node new_node = new Node();
+    new_node.data = n;
+    new_node.next = head;
+    head = new_node; 
+    return;
   }
 }
