@@ -40,4 +40,18 @@ public class LinkedList {
     head = new_node; 
     return;
   }
+
+  public void insertAfter(int b, int n){
+//   b =  node before 'n'
+       Node new_node = new Node();
+       new_node.data = n;
+       Node temp = head;
+       while(temp.data != b){
+         temp = temp.next;
+       }
+      //  temp poiniting to node 'b' after which 'n' is to be inserted
+      new_node.next = temp.next;
+      temp.next = new_node;
+      return;
+  }
 }
