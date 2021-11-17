@@ -54,4 +54,25 @@ public class LinkedList {
       temp.next = new_node;
       return;
   }
+
+  public void delete(int n){
+    if(head == null){
+      return;
+    }
+    if( head.data == n){
+      // if first node to be deleted
+      head = head.next;
+    } else{
+      Node curr = head;
+      Node prev = null;
+      while(curr.data != n){
+          prev = curr;
+          curr = curr.next;
+      }
+      // curr reference to Node to be deleted
+      // prev reference to prev Node 
+      prev.next = curr.next;
+      return;
+    }
+  }
 }
