@@ -65,9 +65,13 @@ public class LinkedList {
     } else{
       Node curr = head;
       Node prev = null;
-      while(curr.data != n){
+      while(curr!= null && curr.data != n){
           prev = curr;
           curr = curr.next;
+      }
+      if(curr==null){
+        // if element is not present
+        return;
       }
       // curr reference to Node to be deleted
       // prev reference to prev Node 
