@@ -4,6 +4,7 @@ public class BubbleSort {
 
     int n = arr.length;
     boolean flag;
+    
     for( int i = 0;i<n-1;i++){
       flag = false;
         for( int j = 0; j< n-1-i;j++){
