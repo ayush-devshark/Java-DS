@@ -1,3 +1,4 @@
+import java.util.*;
 class SelectionSort{
   public static void main(String[] args) {
     int [] arr = {2,5,7,8,1,3};
@@ -15,8 +16,6 @@ class SelectionSort{
       arr[minIndex] = temp;
     }
 
-    for(int x: arr){
-      System.out.print(x + " ");
-      }
+    System.out.println(Arrays.toString(arr));
   }
 }
