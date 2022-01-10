@@ -25,7 +25,7 @@ public class MergeSort {
     int k = l; // new array start index
 
     while( i <= mid && j <= h){
-      if(arr[i] < arr[j]){
+      if(arr[i] <= arr[j]){
         temp[k++] = arr[i++];
       }else{
         temp[k++] = arr[j++];
